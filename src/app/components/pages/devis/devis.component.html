@@ -1,0 +1,136 @@
+<app-navbar-one></app-navbar-one>
+
+<div class="page-title-area item-bg-1">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-title-content">
+                    <a>En remplissant ce formulaire, vous obtiendrez une
+                        estimation de devis.</a>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="contact-section mt-5 mb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="contact-form">
+                <form id="contactForm" (ngSubmit)="AddDevis()">
+                    <div class="section-title">
+                        <a>Le tarif estimé est pour la réalisation d'une fiche
+                            de paie pour le mois actuel et les mois suivants.</a><br>
+                        <a>Une majoration de 50% s’applique pour les fiches de
+                            paie antérieur au 16 du mois actuel.</a>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Mon entreprise est une :</label>
+                                <select type="text" name="entreprise"
+                                    id="entreprise" class="form-control" [(ngModel)]="devis.EntrepriseType"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required>
+                                    <option value="SAS">SAS</option>
+                                    <option value="SASU">SASU</option>
+                                    <option value="SARL">SARL</option>
+                                    <option value="EURL">EURL</option>
+                                    <option value="Entreprise individuelle">Entreprise
+                                        individuelle</option>
+                                    <option value="LMNP">LMNP</option>
+                                    <option value="SNC">SNC</option>
+                                    <option value="SCI">SCI</option>
+                                    <option value="SELARL">SELARL</option>
+                                    <option value="SCP">SCP</option>
+                                    <option value="SCM">SCM</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Branche d'activité <span>*</span></label>
+                                <input type="text" name="bac" id="bac"
+                                    class="form-control" placeholder="Branche d'activité" [(ngModel)]="devis.Activite"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Effectif Salarié <span>*</span></label>
+                                <select type="text" name="efs" id="efs"
+                                    class="form-control" [(ngModel)]="devis.Effectifsalarier"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="Autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Nom <span>*</span></label>
+                                <input type="text" name="nom" id="nom"
+                                    class="form-control" placeholder="Nom"  [(ngModel)]="devis.Nom"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Prénom <span>*</span></label>
+                                <input type="text" name="prenom" id="prenom"
+                                    class="form-control" placeholder="Prénom" [(ngModel)]="devis.Prenom"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Téléphone <span>*</span></label>
+                                <input type="number" name="telephone" id="telephone"
+                                    class="form-control" placeholder="Téléphone" [(ngModel)]="devis.Telephone"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Email <span>*</span></label>
+                                <input type="email" name="email" id="email"
+                                    class="form-control" placeholder="Email" [(ngModel)]="devis.Email"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="send-btn">
+                            <button type="submit" class="default-btn">Envoyer</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

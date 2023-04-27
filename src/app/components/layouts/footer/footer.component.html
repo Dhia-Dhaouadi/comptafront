@@ -1,0 +1,107 @@
+<section class="footer-section pt-100 pb-70">
+    <div class="container">
+        <div class="subscribe-area">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12">
+                    <div class="subscribe-content">
+                        <a>Abonnez-vous à notre newsletter</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <form class="newsletter-form" (ngSubmit)="AddNewsletter()">
+                        <input type="email" class="input-newsletter" [(ngModel)]="newsletter.Email"
+                        [ngModelOptions]="{standalone:
+                        true}"
+                        required placeholder="Votre email" name="EMAIL">
+                        <button type="submit">Abonnez</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <div class="footer-heading">
+                        <img src="../../../../assets/img/home-one/footer.png">
+                    </div>
+                    <ul class="footer-social">
+                        <li><a  target="_blank"><i class="flaticon-facebook"></i></a></li>
+                        <li><a  target="_blank"><i class="flaticon-instagram"></i></a></li>
+                        <li><a  target="_blank"><i class="bx bxl-linkedin"></i></a></li>
+                        <li><a  target="_blank"><i class="flaticon-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <div class="footer-heading">
+                        <h3>Nos Expertises</h3>
+                    </div>
+                    <ul class="footer-quick-links">
+                        <li>Externalisation de la paie</li>
+                        <li>Internalisation de la paie</li>
+                        <li>Audit</li>
+                        <li>Bilan social</li>
+                        <li>Sous-traitance pour les cabinets d'experts comptables</li>
+                        <li>Accompagnement de la mise en place SIRH</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <div class="footer-heading">
+                        <h3><a routerLink="/nosoffres">Nos Offres</a></h3>
+                    </div>
+                    <ul class="footer-quick-links">
+                        <li>Offre PAIE</li>
+                        <li>Offre ESSENTIEL</li>
+                        <li>Offre TRANQUILITÉ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="single-footer-widget">
+                    <div class="footer-heading">
+                        <h3>Contact</h3>
+                    </div>
+                    <div class="footer-info-contact">
+                        <i class="flaticon-phone-call"></i>
+                        <h3>Téléphone</h3>
+                        <span><a href="tel:+33980804626">+33 980804626</a></span>
+                    </div>
+                    <div class="footer-info-contact">
+                        <i class="flaticon-envelope"></i>
+                        <h3>Email</h3>
+                        <span><a href="contact@leaconseil.com">contact@leaconseil.com</a></span>
+                    </div>
+                    <div class="footer-info-contact">
+                        <i class="flaticon-pin"></i>
+                        <h3>Adresse</h3>
+                        <span><a target="_blank">Rue des Colonnes 75002 Paris</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="copyright-area">
+    <div class="container">
+        <div class="copyright-area-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <p><i class='bx bx-copyright'></i>2023 <a href="https://agenceurbancom.fr" target="_blank">Urban Communication</a></p>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <ul>
+                        <li><a routerLink="/terms-conditions">Mention légal</a></li>
+                        <li><a routerLink="/privacy-policy">Politique de confidentialité</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="go-top"><i class="bx bx-chevron-up"></i><i class="bx bx-chevron-up"></i></div>
