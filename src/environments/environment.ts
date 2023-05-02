@@ -2,9 +2,14 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+import { EnvironmentConfiguration } from "src/app/components/pages/model.model";
+
+export const environment: EnvironmentConfiguration = {
+  env_name: 'dev',
+  production: false,
+  apiKey: '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'
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file

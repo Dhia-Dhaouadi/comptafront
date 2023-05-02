@@ -40,7 +40,8 @@
                 "node_modules/magnific-popup/dist/magnific-popup.css",
                 "node_modules/jquery-nice-select/scss/nice-select.scss",
                 "src/styles.scss",
-                "src/responsive.scss"
+                "src/responsive.scss",
+                "node_modules/cookieconsent/build/cookieconsent.min.css"
             ],
             "scripts": [
                 "node_modules/jquery/dist/jquery.min.js",
@@ -52,7 +53,8 @@
                 "src/assets/js/appear.min.js",
                 "src/assets/js/odometer.min.js",
                 "node_modules/wowjs/dist/wow.js",
-                "src/assets/js/main.js"
+                "src/assets/js/main.js",
+                "node_modules/cookieconsent/build/cookieconsent.min.js"
             ],
             "vendorChunk": true,
             "extractLicenses": false,

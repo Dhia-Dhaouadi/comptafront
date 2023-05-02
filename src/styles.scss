@@ -1067,7 +1067,7 @@ Banner Area CSS
 .home-sliders {
     .home-item {
         position: relative;
-        height: 850px;
+        height: 550px;
         z-index: 1;
         background: {
             position: center;
@@ -1086,13 +1086,13 @@ Banner Area CSS
             opacity: .8;
         }
         &.item-bg1 {
-            background-image: url(assets/img/home-one/home1.png);
+            background-image: url(assets/img/home-one/home1.webp);
         }
         &.item-bg2 {
-            background-image: url(assets/img/home-one/home2.png);
+            background-image: url(assets/img/home-one/home2.webp);
         }
         &.item-bg3 {
-            background-image: url(assets/img/home-one/home3.png);
+            background-image: url(assets/img/home-one/home3.webp);
         }
         .main-banner-content {
             position: relative;

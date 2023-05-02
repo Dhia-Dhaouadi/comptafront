@@ -7,8 +7,6 @@ import { BlogGridComponent } from './components/pages/blog-grid/blog-grid.compon
 import { ErrorComponent } from './components/pages/error/error.component';
 import { PrivacyPolicyComponent } from './components/pages/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './components/pages/terms-conditions/terms-conditions.component';
-import { LogInComponent } from './components/pages/log-in/log-in.component';
-import { SignUpComponent } from './components/pages/sign-up/sign-up.component';
 import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { AboutComponent } from './components/pages/about/about.component';
 import { DevisComponent } from './components/pages/devis/devis.component';
@@ -24,8 +22,6 @@ const routes: Routes = [
     {path: '', component: HomeOneComponent},
     {path: 'lecabinet', component: AboutComponent},
     {path: 'nosoffres', component: PricingComponent},
-    {path: 'log-in', component: LogInComponent},
-    {path: 'sign-up', component: SignUpComponent},
     {path: 'terms-conditions', component: TermsConditionsComponent},
     {path: 'privacy-policy', component: PrivacyPolicyComponent},
     {path: 'error', component: ErrorComponent},
