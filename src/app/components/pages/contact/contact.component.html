@@ -5,7 +5,7 @@
         <div class="d-table-cell">
             <div class="container">
                 <div class="page-title-content">
-                    <a>Contactez-nous</a>
+                    <a>Contact</a>
                     <ul>
                         <li></li>
                     </ul>
@@ -23,7 +23,7 @@
                     <i class="flaticon-pin"></i>
                     <div class="content-title">
                         <h3>Adresse</h3>
-                        <p>99 Rue des Colonnes 75002 Paris</p>
+                        <p>9 Rue des Colonnes 75002 Paris</p>
                     </div>
                 </div>
             </div>
@@ -125,14 +125,22 @@
                                     required>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label>Message <span>*</span></label>
-                        <textarea name="message" class="form-control"
-                            id="message" cols="30" rows="6" placeholder="Votre Message" [(ngModel)]="contact.Message"
-                            [ngModelOptions]="{standalone:
-                            true}"
-                            required></textarea>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Message <span>*</span></label>
+                                <textarea name="message" class="form-control"
+                                    id="message" cols="30" rows="6"
+                                    placeholder="Votre Message"
+                                    [(ngModel)]="contact.Message"
+                                    [ngModelOptions]="{standalone:
+                                    true}"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <re-captcha (resolved)="resolved($event)"
+                                siteKey="6LdbQNolAAAAAN96TLsryMpTV8OwWzdJJSjE8oXx"></re-captcha>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="send-btn">

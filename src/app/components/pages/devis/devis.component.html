@@ -22,8 +22,6 @@
                     <div class="section-title">
                         <a>Le tarif estimé est pour la réalisation d'une fiche
                             de paie pour le mois actuel et les mois suivants.</a><br>
-                        <a>Une majoration de 50% s’applique pour les fiches de
-                            paie antérieur au 16 du mois actuel.</a>
                         <div class="bar"></div>
                     </div>
                     <div class="row">
@@ -64,23 +62,11 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Effectif Salarié <span>*</span></label>
-                                <select type="text" name="efs" id="efs"
-                                    class="form-control" [(ngModel)]="devis.Effectifsalarier"
-                                    [ngModelOptions]="{standalone:
-                                    true}"
-                                    required>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="Autre">Autre</option>
-                                </select>
+                                <input type="number" name="efs" id="efs"
+                                class="form-control" placeholder="Effectif Salarié"  [(ngModel)]="devis.Effectifsalarier"
+                                [ngModelOptions]="{standalone:
+                                true}"
+                                required>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -106,7 +92,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Téléphone <span>*</span></label>
-                                <input type="number" name="telephone" id="telephone"
+                                <input type="text" name="telephone" id="telephone"
                                     class="form-control" placeholder="Téléphone" [(ngModel)]="devis.Telephone"
                                     [ngModelOptions]="{standalone:
                                     true}"
@@ -122,6 +108,9 @@
                                     true}"
                                     required>
                             </div>
+                        </div>
+                        <div class="col-md-4 mt-3">
+                            <re-captcha (resolved)="resolved($event)" siteKey="6LdbQNolAAAAAN96TLsryMpTV8OwWzdJJSjE8oXx"></re-captcha>
                         </div>
                     </div>
                     <div class="col-md-6">

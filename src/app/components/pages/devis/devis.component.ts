@@ -11,7 +11,10 @@ import { formatDate } from "@angular/common";
 export class DevisComponent implements OnInit {
     devis = new DevisModel();
     response: any;
-    constructor(private service: ServiceService) {}
+    captcha: string;
+    constructor(private service: ServiceService) {
+        this.captcha = '';
+    }
 
     ngOnInit(): void {
         this.devis.DateAjout = formatDate(
@@ -48,6 +51,15 @@ export class DevisComponent implements OnInit {
                 icon: "error",
             });
         }
+        else if (this.captcha=='') {
+            Swal.fire({
+                title: "Vous n'avez pas verifié que vous n'êtes pas un robot !",
+                text: "",
+                showConfirmButton: false,
+                timer: 3000,
+                icon: "error",
+            });
+        }
         else {
             this.service.AddDevis(this.devis).subscribe((res) => {
                 this.response = res;
@@ -66,6 +78,7 @@ export class DevisComponent implements OnInit {
                     this.devis.Nom = "";
                     this.devis.Telephone = "";
                     this.devis.Email = "";
+                    this.captcha="";
                 } else {
                     Swal.fire({
                         title: "Quelque chose ne marche pas !",
@@ -78,4 +91,9 @@ export class DevisComponent implements OnInit {
             });
         }
     }
+    resolved(captchaResponse: string) {
+        this.captcha = captchaResponse;
+        console.log('resolved captcha with response: ' + this.captcha);
+    }
+
 }

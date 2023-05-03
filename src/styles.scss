@@ -89,7 +89,6 @@ img {
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     color: $black-color;
-    text-transform: capitalize;
     font: {
         family: $optional-font-family;
         weight: bold;
@@ -319,13 +318,11 @@ Navbar Area CSS
             .nav-item {
                 position: relative;
                 padding: 0;
-
+                font-family:Montserrat !important;
                 a {
                     color: $black-color;
-                    text-transform: capitalize;
                     font: {
-                        size: 15.5px;
-                        weight: 600;
+                        size: 16px;
                     }
                     padding: {
                         left: 0;
@@ -396,14 +393,13 @@ Navbar Area CSS
                             bottom: 0;
                         }
                         a {
-                            text-transform: capitalize;
                             padding: 8px 15px;
                             margin: 0;
                             position: relative;
                             color: $black-color;
+                            font-family:Montserrat !important;
                             font: {
                                 size: 14.5px;
-                                weight: 600;
                             }
                             &:hover, &:focus, &.active {
                                 color: $main-color;
@@ -1006,6 +1002,7 @@ Navbar Area CSS
 
                     a {
                         font-size: 15px;
+                        font-family:Montserrat !important;
                         padding-left: 0;
                         padding-right: 0;
                         padding-top: 0;
@@ -1032,6 +1029,7 @@ Navbar Area CSS
                         li {
                             a {
                                 font-size: 14px;
+                                font-family:Montserrat !important;
                                 padding-left: 0 !important;
                             }
                             .dropdown-menu {
@@ -1086,13 +1084,13 @@ Banner Area CSS
             opacity: .8;
         }
         &.item-bg1 {
-            background-image: url(assets/img/home-one/home1.webp);
+            background-image: url(assets/img/home-one/home1.webP);
         }
         &.item-bg2 {
-            background-image: url(assets/img/home-one/home2.webp);
+            background-image: url(assets/img/home-one/home2.webP);
         }
         &.item-bg3 {
-            background-image: url(assets/img/home-one/home3.webp);
+            background-image: url(assets/img/home-one/home3.webP);
         }
         .main-banner-content {
             position: relative;
@@ -2941,7 +2939,6 @@ Banner Area Eight CSS
                 padding: 14px 25px;
                 border: 1px solid $main-color;
                 transition: $transition;
-                text-transform: capitalize;
                 cursor: pointer;
                 font: {
                     size: 15px;
@@ -5945,7 +5942,6 @@ Sidebar Widget Area CSS
             border-bottom: 1px solid #eeeeee;
             padding-bottom: 10px;
             margin-bottom: 25px;
-            text-transform: capitalize;
             position: relative;
             font-size: 21px;
 
@@ -6043,7 +6039,6 @@ Sidebar Widget Area CSS
                 time {
                     display: block;
                     color: $paragraph-color;
-                    text-transform: capitalize;
                     margin: {
                         top: -2px;
                         bottom: 3px;
@@ -6482,7 +6477,6 @@ blockquote, .blockquote {
                 display: inline-block;
                 padding: 5px 20px;
                 border-radius: 30px;
-                text-transform: capitalize;
                 position: relative;
                 z-index: 1;
                 font: {
@@ -6630,7 +6624,6 @@ blockquote, .blockquote {
                 cursor: pointer;
                 outline: 0;
                 border-radius: 0;
-                text-transform: capitalize;
                 transition: $transition;
                 font: {
                     weight: 700;

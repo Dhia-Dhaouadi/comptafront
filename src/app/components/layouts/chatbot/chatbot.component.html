@@ -1,16 +1,20 @@
 <a class="chatbot" (click)="toggleSwitcher()"><img
-        src="../../../../assets/img/chat.webp"></a>
-
-
+        src="../../../../assets/img/chat.webP"></a>
 <div class="chatbotpart" [hidden]="isVisible">
     <div class="card">
         <h4 class="card-header center text-primary">LEA CONSEIL</h4>
         <div class="card-body">
             <div class="frame-box">
-                <div><img src="../../../../assets/img/choose.webp"
+                <div *ngFor="let item of messageArray">
+                    <span>{{item.name}}: </span> {{item.message}}
+                </div>
+                <div><img src="../../../../assets/img/choose.webP"
                         width="50px"
                         height="50px"></div>
             </div>
+            <div><input id="input" type="text" placeholder="Say something..."
+                    autocomplete="off" [(ngModel)]='message'
+                    (keyup.enter)="sendMessage()"/></div>
             <br>
         </div>
     </div>

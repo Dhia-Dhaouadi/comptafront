@@ -39,7 +39,7 @@ const routes: Routes = [
     {path: '**', component: ErrorComponent}
 ];
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),RouterModule.forChild(routes)],
+    imports: [RouterModule.forRoot(routes, {}),RouterModule.forChild(routes)],
     exports: [RouterModule],
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}]
 })

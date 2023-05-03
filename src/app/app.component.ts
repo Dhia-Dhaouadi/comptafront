@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
+import { Component, HostListener, OnDestroy, OnInit } from "@angular/core";
 import {
     Router,
     NavigationStart,
@@ -128,4 +128,5 @@ export class AppComponent implements OnInit, OnDestroy {
                 window.scrollTo(0, 0);
             });
     }
+
 }

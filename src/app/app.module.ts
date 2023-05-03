@@ -17,7 +17,7 @@ import { ErrorComponent } from "./components/pages/error/error.component";
 import { LogInComponent } from "./components/pages/log-in/log-in.component";
 import { SignUpComponent } from "./components/pages/sign-up/sign-up.component";
 import { HttpClientModule } from "@angular/common/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {
     NgcCookieConsentConfig,
     NgcCookieConsentModule,
@@ -30,37 +30,39 @@ import { InternalisationpaieComponent } from "./components/pages/internalisation
 import { BilonSocialeComponent } from "./components/pages/bilon-sociale/bilon-sociale.component";
 import { AccompagnementSylaeComponent } from "./components/pages/accompagnement-sylae/accompagnement-sylae.component";
 import { AccompagnementSIRHComponent } from "./components/pages/accompagnement-sirh/accompagnement-sirh.component";
-import { ChatbotComponent } from './components/layouts/chatbot/chatbot.component';
-
-const cookieConfig: NgcCookieConsentConfig =
-{
-    "cookie": {
-      "domain": "tinesoft.github.io"
+import { ChatbotComponent } from "./components/layouts/chatbot/chatbot.component";
+import { environment } from "src/environments/environment";
+import { NgxCaptchaModule } from "ngx-captcha";
+import { RecaptchaModule } from "ng-recaptcha";
+const cookieConfig: NgcCookieConsentConfig = {
+    cookie: {
+        domain: "tinesoft.github.io",
     },
-    "position": "bottom",
-    "theme": "classic",
-    "palette": {
-      "popup": {
-        "background": "#000000",
-        "text": "#ffffff",
-        "link": "#ffffff"
-      },
-      "button": {
-        "background": "#0060a1",
-        "text": "#ffffff",
-        "border": "transparent"
-      }
+    position: "bottom",
+    theme: "classic",
+    palette: {
+        popup: {
+            background: "#000000",
+            text: "#ffffff",
+            link: "#ffffff",
+        },
+        button: {
+            background: "#0060a1",
+            text: "#ffffff",
+            border: "transparent",
+        },
     },
-    "type": "info",
-    "content": {
-      "message": "LEA CONSEIL utilise les cookies ,vous pouvez accepter ou continuer votre navigation sans accepter",
-      "dismiss": "Autoriser les cookies",
-      "deny": "Continuer sans accepter",
-      "link": "Plus de details",
-      "href": "http://leaconseil.com/#/privacy-policy",
-      "policy": "Cookie Policy"
-    }
-  };
+    type: "info",
+    content: {
+        message:
+            "LEA CONSEIL utilise les cookies ,vous pouvez accepter ou continuer votre navigation sans accepter",
+        dismiss: "Autoriser les cookies",
+        deny: "Continuer sans accepter",
+        link: "Plus de details",
+        href: "http://leaconseil.com/#/privacy-policy",
+        policy: "Cookie Policy",
+    },
+};
 @NgModule({
     declarations: [
         AppComponent,
@@ -94,6 +96,7 @@ const cookieConfig: NgcCookieConsentConfig =
         HttpClientModule,
         FormsModule,
         NgcCookieConsentModule.forRoot(cookieConfig),
+        RecaptchaModule
     ],
     bootstrap: [AppComponent],
 })

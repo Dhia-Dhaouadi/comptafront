@@ -11,8 +11,10 @@ import Swal from "sweetalert2";
 export class ContactComponent implements OnInit {
     contact = new Contact();
     response: any;
-    constructor(private service: ServiceService) {}
-
+    captcha: string;
+    constructor(private service: ServiceService) {
+        this.captcha = "";
+    }
     ngOnInit(): void {
         this.contact.DateAjout = formatDate(
             new Date(),
@@ -41,6 +43,14 @@ export class ContactComponent implements OnInit {
         } else if (!emailvalid.test(this.contact.Email)) {
             Swal.fire({
                 title: "Entrez un Email Valid",
+                text: "",
+                showConfirmButton: false,
+                timer: 3000,
+                icon: "error",
+            });
+        } else if (this.captcha == "") {
+            Swal.fire({
+                title: "Vous n'avez pas verifié que vous n'êtes pas un robot !",
                 text: "",
                 showConfirmButton: false,
                 timer: 3000,
@@ -75,5 +85,9 @@ export class ContactComponent implements OnInit {
                 }
             });
         }
+    }
+    resolved(captchaResponse: string) {
+        this.captcha = captchaResponse;
+        console.log("resolved captcha with response: " + this.captcha);
     }
 }

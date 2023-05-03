@@ -1,5 +1,6 @@
 .chatbot{
     position: fixed;
+    display: none;
     top: 17%;
     width: 189px;
     z-index: 9999;
@@ -16,6 +17,7 @@
 }
 .chatbotpart{
     position: fixed;
+    display: none;
     top: 25%;
     width: 300px;
     z-index: 9999;
@@ -24,6 +26,7 @@
 }
 .chatheigh{
     height: 350px;
+    display: none;
 }
 .frame-box{
     overflow-y: scroll;
