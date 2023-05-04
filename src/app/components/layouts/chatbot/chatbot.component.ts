@@ -1,47 +1,26 @@
 import { Component, OnInit } from "@angular/core";
-import { ServiceService } from "src/app/services/service.service";
-
+import { Observable } from "rxjs";
+import { Chatservice, Message } from "src/app/services/chat.service";
 @Component({
     selector: "app-chatbot",
     templateUrl: "./chatbot.component.html",
     styleUrls: ["./chatbot.component.scss"],
 })
 export class ChatbotComponent implements OnInit {
+    messages: Message[] = [];
+    value: string | undefined;
     isVisible = true;
-    messageArray = [];
-    synth: any;
-    voices: any;
-    constructor(private socketService: ServiceService) {
-        this.synth = window.speechSynthesis;
-        this.voices = this.synth.getVoices();
-    }
-    message = "";
+    constructor(public chatService: Chatservice) {}
     ngOnInit(): void {
-        this.socketService.receivedReply().subscribe((data) => {
-            this.messageArray.push({
-                name: "LEA CONSEIL",
-                message: data.outputMessage,
-            });
-            this.speak(data.outputMessage);
+        this.chatService.conversation.subscribe((val) => {
+            this.messages = this.messages.concat(val);
         });
     }
     toggleSwitcher() {
         this.isVisible = !this.isVisible;
     }
     sendMessage() {
-        const data = { message: this.message };
-        this.socketService.sendMessage(data);
-        this.messageArray.push({ name: "you", message: this.message });
-        console.log(this.message)
-        this.message = "";
-    }
-    speak(string) {
-        let u = new SpeechSynthesisUtterance(string);
-        u.text = string;
-        u.lang = "en-US";
-        u.volume = 1;
-        u.rate = 1;
-        u.pitch = 1;
-        this.synth.speak(u);
+        this.chatService.getBotAnswer(this.value);
+        this.value = "";
     }
 }

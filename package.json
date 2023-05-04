@@ -32,7 +32,6 @@
     "ngx-popperjs": "^14.1.6",
     "popper.js": "^1.16.1",
     "rxjs": "~6.5.4",
-    "socket.io-client": "^4.6.1",
     "sweetalert2": "^11.7.3",
     "tslib": "^2.0.0",
     "wowjs": "^1.1.3",

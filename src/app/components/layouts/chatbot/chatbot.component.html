@@ -2,20 +2,31 @@
         src="../../../../assets/img/chat.webP"></a>
 <div class="chatbotpart" [hidden]="isVisible">
     <div class="card">
-        <h4 class="card-header center text-primary">LEA CONSEIL</h4>
+        <h4 class="card-header center text-primary"><img
+                src="../../../../assets/img/choose.webP"
+                width="50px"
+                height="50px">LEA CONSEIL</h4>
         <div class="card-body">
             <div class="frame-box">
-                <div *ngFor="let item of messageArray">
-                    <span>{{item.name}}: </span> {{item.message}}
-                </div>
-                <div><img src="../../../../assets/img/choose.webP"
-                        width="50px"
-                        height="50px"></div>
+                <ng-container *ngFor="let message of messages">
+                    <div class="message"
+                        [ngClass]="{'from':message.author==='LEACONSEIL',
+                        'to':message.author===''}">{{message.content}}</div>
+                </ng-container>
             </div>
-            <div><input id="input" type="text" placeholder="Say something..."
-                    autocomplete="off" [(ngModel)]='message'
-                    (keyup.enter)="sendMessage()"/></div>
-            <br>
+            <div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <input [(ngModel)]="value" (keyup.enter)="sendMessage()"
+                            type="text" class="form-control" placeholder="Votre message">
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-primary" (click)="sendMessage()">></button>
+                    </div>
+                </div>
+                <ng-template #dialogInfo><span [className]="'float-right'">Totale
+                        messages : {{messages.length}}</span></ng-template>
+            </div>
         </div>
     </div>
 </div>
