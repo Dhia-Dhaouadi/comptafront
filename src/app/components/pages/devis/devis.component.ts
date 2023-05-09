@@ -32,7 +32,8 @@ export class DevisComponent implements OnInit {
             this.devis.Nom == undefined  ||
             this.devis.Prenom == undefined  ||
             this.devis.Telephone == undefined  ||
-            this.devis.Email == undefined
+            this.devis.Email == undefined ||
+            this.devis.NomEntreprise == undefined
         ) {
             Swal.fire({
                 title: "Tous les champs sont obligatoires !",
