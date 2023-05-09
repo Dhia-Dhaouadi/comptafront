@@ -8,6 +8,7 @@ export class DevisModel {
     Telephone: any;
     Email: any;
     DateAjout:any;
+    NomEntreprise:any;
 }
 export class Contact {
     id: any;
