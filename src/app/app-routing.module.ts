@@ -33,7 +33,7 @@ const routes: Routes = [
     {path: 'Audit', component: AuditComponent},
     {path: 'ExternalisationPaie', component: ExternalisationpaieComponent},
     {path: 'InternalisationPaie', component: InternalisationpaieComponent},
-    {path: 'BilonSocial', component: BilonSocialeComponent},
+    {path: 'BilanSocial', component: BilonSocialeComponent},
     {path: 'SYLAE', component: AccompagnementSylaeComponent},
     {path: 'SIRH', component: AccompagnementSIRHComponent},
     {path: '**', component: ErrorComponent}
