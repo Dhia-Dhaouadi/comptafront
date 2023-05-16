@@ -2,31 +2,46 @@
         src="../../../../assets/img/chat.webP"></a>
 <div class="chatbotpart" [hidden]="isVisible">
     <div class="card">
-        <h4 class="card-header center text-primary"><img
+
+            <h4 class="card-header center text-primary">
+                <img
                 src="../../../../assets/img/choose.webP"
                 width="50px"
-                height="50px">LEA CONSEIL</h4>
+                height="50px">LEA CONSEIL <a class="red" type="button"
+                (click)="toggleSwitcher()">x</a></h4>
         <div class="card-body">
             <div class="frame-box">
                 <ng-container *ngFor="let message of messages">
                     <div class="message"
                         [ngClass]="{'from':message.author==='LEACONSEIL',
-                        'to':message.author===''}">{{message.content}}</div>
+                        'to':message.author===''}">{{message.content}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div
+                            *ngIf="message.author==='LEACONSEIL'"><button
+                                (click)="getValue($event)" class="bot"
+                                value="Quels sont vos tarifs ?">Quels sont vos
+                                tarifs ?</button>&nbsp;<button
+                                (click)="getValue($event)" class="bot"
+                                value="Quel est votre logiciel ?">Quel est votre
+                                logiciel ?</button>&nbsp;<button
+                                (click)="getValue($event)" class="bot"
+                                value="Quelle est la durée d'engagement ?">Quelle
+                                est la durée d'engagement ?</button>&nbsp;
+                            <button (click)="getValue($event)" class="bot"
+                                value="Pouvez-vous gérer la migration entre notre logiciel vers le vôtre ?">Pouvez- vous
+                                gérer la migration entre notre logiciel vers le
+                                vôtre ?</button>&nbsp;
+                            <button (click)="getValue($event)" class="bot"
+                                value="Vous proposez de l'internalisation de paie ?">Vous proposez de l'internalisation de
+                                paie ?</button>&nbsp;
+                            <button (click)="getValue($event)" class="bot"
+                                value="Vous proposez de l'externalisation de paie ?">Vous proposez de l'externalisation de
+                                paie ?</button>
+                        </div></div>
                 </ng-container>
             </div>
-            <div>
-                <div class="row">
-                    <div class="col-md-10">
-                        <input [(ngModel)]="value" (keyup.enter)="sendMessage()"
-                            type="text" class="form-control" placeholder="Votre message">
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary" (click)="sendMessage()">></button>
-                    </div>
-                </div>
-                <ng-template #dialogInfo><span [className]="'float-right'">Totale
-                        messages : {{messages.length}}</span></ng-template>
-            </div>
+                <div class="container">
+                    <input class="form-control" type="text"  [(ngModel)]="value" (keyup.enter)="sendMessage()" placeholder="Votre message" name="name" required>
+                    <button type="submit" class="btn btn-primary"(click)="sendMessage()">></button>
+                  </div>
         </div>
     </div>
 </div>

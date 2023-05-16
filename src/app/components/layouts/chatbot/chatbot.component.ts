@@ -8,7 +8,7 @@ import { Chatservice, Message } from "src/app/services/chat.service";
 })
 export class ChatbotComponent implements OnInit {
     messages: Message[] = [];
-    value: string | undefined;
+    value: string;
     isVisible = true;
     constructor(public chatService: Chatservice) {}
     ngOnInit(): void {
@@ -18,6 +18,10 @@ export class ChatbotComponent implements OnInit {
     }
     toggleSwitcher() {
         this.isVisible = !this.isVisible;
+    }
+    getValue(event:any){
+        this.value=event.target.value;
+        this.sendMessage();
     }
     sendMessage() {
         this.chatService.getBotAnswer(this.value);

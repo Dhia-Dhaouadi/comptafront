@@ -80,6 +80,7 @@ export class DevisComponent implements OnInit {
                     this.devis.Telephone = "";
                     this.devis.Email = "";
                     this.captcha="";
+                    this.devis.NomEntreprise="";
                 } else {
                     Swal.fire({
                         title: "Quelque chose ne marche pas !",

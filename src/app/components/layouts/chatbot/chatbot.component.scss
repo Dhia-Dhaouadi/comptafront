@@ -1,26 +1,35 @@
 .chatbot{
     position: fixed;
-    top: 17%;
+    top: 80%;
     width: 189px;
     z-index: 9999;
     padding: 10px 5px;
-    left: 90%;
+    left: 94%;
 }
 @media only screen and (max-width: 767px) {
     .chatbot{
-        display: none;
+        top: 80%;
+        width: 189px;
+        z-index: 9999;
+        padding: 10px 5px;
+        left: 75%;
     }
     .chatbotpart{
-        display: none;
+        position: fixed;
+        top: 25% !important;
+        width: 400px;
+        z-index: 9999;
+        padding: 10px 5px;
+        left: 0% !important;
     }
 }
 .chatbotpart{
     position: fixed;
-    top: 25%;
+    top: 40%;
     width: 300px;
     z-index: 9999;
     padding: 10px 5px;
-    left: 70%;
+    left: 73%;
 }
 .chatheigh{
     height: 350px;
@@ -48,6 +57,7 @@
     background-color: #e5e4e9;
     color: #363636;
     margin-right: 100px;
+    width: 200Px;
 }
 
 .message.to + .message.to,
@@ -61,3 +71,15 @@ border-radius: 30px;
 .btn{
     border-radius: 30px;
 }
+
+.bot{
+    background-color: #2096fe8b;
+    color: white;
+}
+.red{
+    margin-left: 10px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+  }

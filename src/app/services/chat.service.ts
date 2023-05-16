@@ -13,14 +13,22 @@ export class Chatservice {
     constructor(){}
     conversation = new Subject<Message[]>()
     messageMap={
-        "Salut":"Bonjour, Je suis LEA CONSEIL, comment je peux vous aider ?",
-        "Bonjour":"Bonjour, Ravis de votre message, comment je peux vous aider ?",
-        "Comment allez-vous":"Super est vous ?",
-        "Comment allez-vous ?":"Super est vous ?",
-        "comment vas-tu ?":"Trés bien est vous ?",
-        "comment vas-tu":"Trés bien et vous ?",
-        "comment ça va":"Trés bien et vous ?",
-        "comment ça va ?":"Trés bien et vous ?",
+        "Salut":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "salut":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "Bonjour":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "bonjour":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "Comment allez-vous":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "Comment allez-vous ?":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "comment vas-tu ?":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "comment vas-tu":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "comment ça va":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "comment ça va ?":"Bonjour je suis Léa comment puis-je vous aider ?",
+        "Quels sont vos tarifs ?":"N'hésitez pas à remplir ce formulaire https://leaconseil.com/#/Devis.",
+        "Quel est votre logiciel ?":"Silae et Quadra.",
+        "Quelle est la durée d'engagement ?":"Pas de durée, juste un préavis de mois à respecter.",
+        "Pouvez-vous gérer la migration entre notre logiciel vers le vôtre ?":"Oui à condition de pouvoir récupérer les éléments nécessaires à cette migration.",
+        "Vous proposez de l'internalisation de paie ?":"Oui avec silae.",
+        "Vous proposez de l'externalisation de paie ?":"Oui.",
         "qui êtes-vous":"Je suis LEA CONSEIL, cabinet de conseil en paie et RH spécialisé dans l'externalisation de la paie, leaconseil.com/#/lecabinet",
         "qui êtes-vous ?":"Je suis LEA CONSEIL, cabinet de conseil en paie et RH spécialisé dans l'externalisation de la paie, leaconseil.com/#/lecabinet",
         "qui es-tu":"Je suis LEA CONSEIL, cabinet de conseil en paie et RH spécialisé dans l'externalisation de la paie, leaconseil.com/#/lecabinet",
@@ -29,7 +37,7 @@ export class Chatservice {
         "qui es-tu ?":"Je suis LEA CONSEIL, cabinet de conseil en paie et RH spécialisé dans l'externalisation de la paie, leaconseil.com/#/lecabinet",
         "tu es qui ?":"Je suis LEA CONSEIL, cabinet de conseil en paie et RH spécialisé dans l'externalisation de la paie, leaconseil.com/#/lecabinet",
         "qui tu ?":"Je suis LEA CONSEIL, cabinet de conseil en paie et RH spécialisé dans l'externalisation de la paie, leaconseil.com/#/lecabinet",
-        "default":"Bonjour, Je suis LEA CONSEIL, LEA CONSEIL ChatBot est encours de construction , leaconseil.com/#/lecabinet , http://leaconseil.com/#/Devis, http://leaconseil.com/#/contact"
+        "default":"Bonjour je suis Léa comment puis-je vous aider ?"
     }
     getBotAnswer(msg:any){
         const userMessage = new Message('',msg);

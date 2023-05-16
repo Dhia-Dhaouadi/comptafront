@@ -17,7 +17,7 @@ import { InternalisationpaieComponent } from './components/pages/internalisation
 import { BilonSocialeComponent } from './components/pages/bilon-sociale/bilon-sociale.component';
 import { AccompagnementSylaeComponent } from './components/pages/accompagnement-sylae/accompagnement-sylae.component';
 import { AccompagnementSIRHComponent } from './components/pages/accompagnement-sirh/accompagnement-sirh.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { HashLocationStrategy, LocationStrategy} from '@angular/common';
 const routes: Routes = [
     {path: '', component: HomeOneComponent},
     {path: 'lecabinet', component: AboutComponent},
@@ -36,10 +36,10 @@ const routes: Routes = [
     {path: 'BilanSocial', component: BilonSocialeComponent},
     {path: 'SYLAE', component: AccompagnementSylaeComponent},
     {path: 'SIRH', component: AccompagnementSIRHComponent},
-    {path: '**', component: ErrorComponent}
+    {path: '**', component: ErrorComponent},
 ];
 @NgModule({
-    imports: [RouterModule.forRoot(routes, {}),RouterModule.forChild(routes)],
+    imports: [RouterModule.forRoot(routes)],
     exports: [RouterModule],
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}]
 })
