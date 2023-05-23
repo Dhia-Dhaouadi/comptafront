@@ -95,7 +95,6 @@ export class DevisComponent implements OnInit {
     }
     resolved(captchaResponse: string) {
         this.captcha = captchaResponse;
-        console.log('resolved captcha with response: ' + this.captcha);
     }
 
 }

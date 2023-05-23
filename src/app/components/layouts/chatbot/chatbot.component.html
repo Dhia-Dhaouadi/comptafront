@@ -2,13 +2,12 @@
         src="../../../../assets/img/chat.webP"></a>
 <div class="chatbotpart" [hidden]="isVisible">
     <div class="card">
-
             <h4 class="card-header center text-primary">
                 <img
                 src="../../../../assets/img/choose.webP"
                 width="50px"
                 height="50px">LEA CONSEIL <a class="red" type="button"
-                (click)="toggleSwitcher()">x</a></h4>
+                (click)="toggleSwitcher()"><i class="bx bx-chevron-down"></i></a></h4>
         <div class="card-body">
             <div class="frame-box">
                 <ng-container *ngFor="let message of messages">
@@ -40,7 +39,7 @@
             </div>
                 <div class="container">
                     <input class="form-control" type="text"  [(ngModel)]="value" (keyup.enter)="sendMessage()" placeholder="Votre message" name="name" required>
-                    <button type="submit" class="btn btn-primary"(click)="sendMessage()">></button>
+                    <button type="submit" class="btn btn-primary"(click)="sendMessage()"><i class="bx bxs-paper-plane"></i></button>
                   </div>
         </div>
     </div>

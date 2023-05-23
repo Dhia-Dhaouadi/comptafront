@@ -16,8 +16,8 @@
     }
     .chatbotpart{
         position: fixed;
-        top: 25% !important;
-        width: 400px;
+        top: 15% !important;
+        width: 350px !important;
         z-index: 9999;
         padding: 10px 5px;
         left: 0% !important;
@@ -25,19 +25,20 @@
 }
 .chatbotpart{
     position: fixed;
-    top: 40%;
-    width: 300px;
+    top: 25%;
+    width: 400px;
     z-index: 9999;
     padding: 10px 5px;
-    left: 73%;
+    left: 65%;
 }
-.chatheigh{
-    height: 350px;
+.chatbotpart .card{
+    border-radius: 30px;
+    height: 500px;
 }
 .frame-box{
     overflow-y: scroll;
     border-radius: 15px;
-    height: 200px;
+    height: 350px;
 }
 .message{
     border-radius: 20px;
@@ -77,9 +78,10 @@ border-radius: 30px;
     color: white;
 }
 .red{
-    margin-left: 10px;
+    margin-left: 100px;
 }
 .container {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
   }
