@@ -11,6 +11,8 @@
                         évite-t-il l’ennui ?</a>
                     <a [hidden]="id!='teletravail-collegues'">Télétravail :
                         comment est vécue la nouvelle relation entre collègues ?</a>
+                    <a [hidden]="id!='chèques-vacances'">Tout ce que vous devez
+                        savoir sur les chèques-vacances</a>
                     <ul>
                     </ul>
                 </div>
@@ -140,7 +142,7 @@
                                         target="_blank"><i
                                             class="flaticon-twitter"></i></a></li>
                                 <li><a
-                                        href="https://www.linkedin.com/shareArticle?url=http://leaconseil.com/#/Actualité/abandon-de-poste-2023"
+                                        (click)="shareOnLinkedIn('http://leaconseil.com/#/Actualité/abandon-de-poste-2023')"
                                         target="_blank"><i class="bx
                                             bxl-linkedin"></i></a></li>
                             </ul>
@@ -257,7 +259,7 @@
                 [hidden]="id!='teletravail-collegues'">
                 <div class="blog-details-desc">
                     <div class="article-image">
-                        <img src="assets/img/blog/collegue.webP`" alt="image">
+                        <img src="assets/img/blog/collegue.webP" alt="image">
                     </div>
                     <div class="article-content">
                         <div class="entry-meta">
@@ -348,6 +350,113 @@
                                         href="https://www.linkedin.com/shareArticle?url=http://leaconseil.com/#/Actualité/teletravail-collegues"
                                         target="_blank"><i class="bx
                                             bxl-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12"
+                [hidden]="id!='chèques-vacances'">
+                <div class="blog-details-desc">
+                    <div class="article-image">
+                        <img src="assets/img/blog/vacances.webP" alt="image">
+                    </div>
+                    <div class="article-content">
+                        <div class="entry-meta">
+                            <ul>
+                                <li><span>Publié le&nbsp;:</span> <a>&nbsp;14
+                                        Juin 2023</a></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <p>En l’absence de CSE, toute entreprise (de moins de 50
+                            salariés) peut proposer à ses salariés de bénéficier
+                            de chèques-vacances.</p>
+                        <p>Cela va permettre à l’employeur de bénéficier
+                            d’exonération de charges et au salarié d’un
+                            complément de revenu.</p>
+                        <a>Qu’est-ce qu’un chèque-vacances ?</a>
+                        <p>Le chèque-vacance est un titre nominatif de paiement
+                            qui permet au salarié d’acheter des prestations de
+                            service liées aux loisirs et aux vacances (transport
+                            en commun, chambre d’hôtel, camping, location de
+                            voiture, restaurant, billet de train, frais de
+                            culture, loisirs, etc.) en France et dans l’Union
+                            Européenne.</p>
+                        <p>Le chèque-vacance ne permet pas d’acheter des biens
+                            de consommation courante (exemple : matériel de
+                            plongée, serviettes de plage, etc).</p>
+                        <p>Toutes les entreprises peuvent proposer à leurs
+                            salariés des chèques-vacances. Il ne s’agit en aucun
+                            cas d’une obligation légale mais d’une démarche
+                            volontaire de l’employeur. De son côté le salarié
+                            peut décider d’en profiter ou non.</p>
+                        <hr>
+                        <a>Qui peut en bénéficier ?</a>
+                        <p>Tous les salariés peuvent en bénéficier quelque soit
+                            leur contrat de travail.</p>
+                        <p>Tous les travailleurs non-salariés peuvent également
+                            en bénéficier (gérant majoritaire, profession
+                            libérale, auto-entrepreneur).</p>
+                        <p>Mais également les chefs d’entreprise de moins de 50
+                            salariés, leurs conjoints ou concubins ou
+                            partenaires liés par un Pacs ainsi que les personnes
+                            à leur charge.</p>
+                        <p>La participation de l’employeur est cependant
+                            plafonnée. Elle dépend de la rémunération du salarié
+                            ainsi que du nombre de parts de son foyer fiscal.</p>
+                        <p>Ainsi, la contribution patronale ne doit pas dépasser
+                            80 % de la valeur du chèque pour une rémunération de
+                            moins de 3 428 € par mois. Elle est fixée à 50 %
+                            dans le cas contraire.</p>
+                        <p>Les pourcentages sont majorés de 5% par enfant à
+                            charge (10 % lorsque l’enfant se trouve en situation
+                            de handicap), dans la limite de 15 %.</p>
+                        <hr>
+                        <a>Quelle est leur durée de validité ?</a>
+                        <p>Les chèques-vacances ont une durée de validité de
+                            deux ans. La date limite de validité est fixée au 31
+                            décembre de la 2ème année civile suivant l’année
+                            d’émission.</p>
+                        <p>Par exemple, en chèque émis le 1er mars 2021 devra
+                            être utilisé avant le 31 décembre 2023.</p>
+                        <p>Si vous n’avez pas utilisé le chèque-vacance à
+                            l’issue de sa période de validité vous pouvez
+                            demander son échange. L’échange est possible durant
+                            les 3 mois qui suivent la fin de validité.</p>
+                        <hr>
+                        <a>Comment l’employeur peut-il attribuer des chèques
+                            vacances ?</a>
+                        <p>Le salarié désirant bénéficier de chèques-vacances
+                            pourra financer en partie les chèques-vacances qu’il
+                            souhaite acquérir.</p>
+                        <p>Si le salarié le souhaite, il est envisageable de
+                            procéder par prélèvements sur la paye. Il faudra
+                            dans son cas requérir son accord écrit.</p>
+                        <p>Critères pour l’attribution des chèques vacances :</p>
+                        <p>* La contribution patronale devra faire l’objet d’un
+                            accord collectif. Elle sera modulée selon les
+                            niveaux de rémunération. Et elle ne pourra pas se
+                            substituer à un élément de salaire passé ou à venir.</p>
+                        <p>* Enfin, la contribution patronale se limitera à 30 %
+                            du Smic brut mensuel (temps plein) par salarié.</p>
+                    </div>
+                    <div class="article-footer">
+                        <div class="article-share">
+                            <ul class="social">
+                                <li><span>Partager:</span></li>
+                                <li><a
+                                        href="https://www.facebook.com/sharer/sharer.php?u=http://leaconseil.com/#/Actualité/chèques-vacances"
+                                        target="_blank"><i
+                                            class="flaticon-facebook"></i></a></li>
+                                <li><a
+                                        href="https://twitter.com/intent/tweet?url=http://leaconseil.com/#/Actualité/chèques-vacances"
+                                        target="_blank"><i
+                                            class="flaticon-twitter"></i></a></li>
+                                <li><a
+                                        (click)="shareOnLinkedIn('http://leaconseil.com/#/Actualité/chèques-vacances')"
+                                        target="_blank"><i class="bx
+                                        bxl-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>

@@ -2,8 +2,8 @@
         src="../../../../assets/img/chat.webP"></a>
 <div class="chatbotpart" [hidden]="isVisible">
     <div class="card">
-            <h4 class="card-header center text-primary">
-                <img
+        <h4 class="card-header center text-primary">
+            <img
                 src="../../../../assets/img/choose.webP"
                 width="50px"
                 height="50px">LEA CONSEIL <a class="red" type="button"
@@ -14,33 +14,69 @@
                     <div class="message"
                         [ngClass]="{'from':message.author==='LEACONSEIL',
                         'to':message.author===''}">{{message.content}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div
-                            *ngIf="message.author==='LEACONSEIL'"><button
-                                (click)="getValue($event)" class="bot"
-                                value="Quels sont vos tarifs ?">Quels sont vos
-                                tarifs ?</button>&nbsp;<button
-                                (click)="getValue($event)" class="bot"
-                                value="Quel est votre logiciel ?">Quel est votre
-                                logiciel ?</button>&nbsp;<button
-                                (click)="getValue($event)" class="bot"
-                                value="Quelle est la durée d'engagement ?">Quelle
-                                est la durée d'engagement ?</button>&nbsp;
-                            <button (click)="getValue($event)" class="bot"
-                                value="Pouvez-vous gérer la migration entre notre logiciel vers le vôtre ?">Pouvez- vous
-                                gérer la migration entre notre logiciel vers le
-                                vôtre ?</button>&nbsp;
-                            <button (click)="getValue($event)" class="bot"
-                                value="Vous proposez de l'internalisation de paie ?">Vous proposez de l'internalisation de
-                                paie ?</button>&nbsp;
-                            <button (click)="getValue($event)" class="bot"
-                                value="Vous proposez de l'externalisation de paie ?">Vous proposez de l'externalisation de
-                                paie ?</button>
+                            *ngIf="message.author==='LEACONSEIL' && message.content!='Votre données sont bien envoyées, nous vous contacterons dans les brefs données.'">
+                            <form>
+                                <div class="row mt-2">
+                                    <div class="col-md-12"><input
+                                            class="form-control"
+                                            placeholder="Votre Nom"
+                                            [(ngModel)]="form.nom"
+                                            [ngModelOptions]="{standalone:
+                                            true}"
+                                            required></div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12"><input
+                                            class="form-control"
+                                            placeholder="Votre Prénom"
+                                            [(ngModel)]="form.prenom"
+                                            [ngModelOptions]="{standalone:
+                                            true}"
+                                            required></div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12"><input
+                                            class="form-control"
+                                            placeholder="Votre Email"
+                                            [(ngModel)]="form.email"
+                                            [ngModelOptions]="{standalone:
+                                            true}"
+                                            required></div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12"><input
+                                            class="form-control"
+                                            placeholder="Votre Numéro Téléphone"
+                                            [(ngModel)]="form.telephone"
+                                            [ngModelOptions]="{standalone:
+                                            true}"
+                                            required></div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12"><textarea
+                                            class="form-control"
+                                            placeholder="Votre message"
+                                            [(ngModel)]="form.message"
+                                            [ngModelOptions]="{standalone:
+                                            true}"
+                                            required></textarea></div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-6"><button
+                                            class="default-btn"
+                                            (click)="AddFormChat()">Envoyer</button></div>
+                                </div>
+                            </form>
                         </div></div>
                 </ng-container>
             </div>
-                <div class="container">
-                    <input class="form-control" type="text"  [(ngModel)]="value" (keyup.enter)="sendMessage()" placeholder="Votre message" name="name" required>
-                    <button type="submit" class="btn btn-primary"(click)="sendMessage()"><i class="bx bxs-paper-plane"></i></button>
-                  </div>
+            <div class="container">
+                <input class="form-control" type="text" [(ngModel)]="value"
+                    (keyup.enter)="sendMessage()" placeholder="Votre message"
+                    name="name" required>
+                <button type="submit" class="btn btn-primary"
+                    (click)="sendMessage()"><i class="bx bxs-paper-plane"></i></button>
+            </div>
         </div>
     </div>
 </div>

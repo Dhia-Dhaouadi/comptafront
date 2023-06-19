@@ -7,8 +7,8 @@ export class DevisModel {
     Nom: any;
     Telephone: any;
     Email: any;
-    DateAjout:any;
-    NomEntreprise:any;
+    DateAjout: any;
+    NomEntreprise: any;
 }
 export class Contact {
     id: any;
@@ -19,10 +19,19 @@ export class Contact {
     Email: any;
     Sujet: any;
     Message: any;
-    DateAjout:any;
+    DateAjout: any;
 }
 export class Newsletter {
     id: any;
     Email: any;
-    DateAjout:any;
+    DateAjout: any;
+}
+export class ChatForm {
+    id: any;
+    nom: any;
+    prenom: any;
+    email: any;
+    telephone: any;
+    DateAjout: any;
+    message: any;
 }
