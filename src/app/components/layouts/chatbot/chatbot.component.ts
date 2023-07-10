@@ -31,7 +31,6 @@ export class ChatbotComponent implements OnInit {
     }
     getValue(event: any) {
         this.value = event.target.value;
-        console.log(this.value);
         this.sendMessage();
     }
     sendMessage() {
